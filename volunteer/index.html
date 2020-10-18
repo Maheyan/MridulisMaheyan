@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Chat App | Apar's Classroom</title>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="brand"><span>Apar's</span> Classroom</h1>
+    <div class="wrapper">
+      <div class="company-info">
+        <h3>Volunteer Selection Form</h3>
+      </div>
+      <div class="contact">
+        <h3>Personal Informataion</h3>
+        
+        <form id="volunteerForm">
+          <div class="form-group">
+            <label>Name</label>
+            <input type="text" name="name" id="name" placeholder="Enter your name" required>
+          
+            <label>Email Address</label>
+            <input type="email" name="email" id="email" placeholder="ex: xyz@gmail.com" required>
+          
+            <label>Facebook ID</label>
+            <input type="text" name="fbid" id="fbid" placeholder="ex: https://www.facebook.com/XXXXXXXX/" required>
+         
+            <label>College / University</label>
+            <input type="text" name="college" id="college" placeholder="ex: ABCD School and College" required>
+          
+          	      <div class ="container">
+		<label for="batchSelect">Select your HSC Batch :</label>
+
+		<select name="batchSelect" id="batchSelect">
+			<option value="-">--- Select Your Batch ---</option>
+			<option value="HSC-22">HSC'22</option>
+			<option value="HSC-21">HSC'21</option>
+			<option value="HSC-19">HSC'19</option>
+			<option value="HSC-18">HSC'18</option>
+			<option value="HSC-17">HSC'17</option>
+		</select></div>
+          
+            <label>Phone Number</label>
+            <input type="number" name="phone" id="phone" placeholder="01XX XXX XXXX">
+
+          <div class="rcontainer">Gender
+          	<input type="radio"
+				name="genderRadio"
+				id="Male">
+				<label for="Male">Male</label><br>
+		<input type="radio"
+				name="genderRadio"
+				id="Female">
+				<label for="Female">Female</label>
+          </div>
+
+            <label>Current City</label>
+            <input type="text" name="city" id="city" placeholder="ex: Dhaka" required>
+
+          <br>
+		<h3>Qualification</h3>
+				<div class="rcontainer">Do you know the basics of Google Sheet :
+		<input type="radio"
+				name="sheetRadio"
+				id="yesSheet">
+						<label for="yesSheet">Yes</label><br>		
+		<input type="radio"
+				name="sheetRadio"
+				id="noSheet">
+				<label for="noSheet">No</label>
+		</div>
+		<br>
+		<h3>Hardware Configuration:</h3>
+		<div class ="rcontainer">
+			Select your device :
+
+		<input type="radio"
+				name="deviceradio"
+				id="desktop"><label for="desktop">Desktop</label><br>
+
+		<input type="radio"
+				name="deviceradio"
+				id="laptop"><label for="laptop">Laptop</label><br>
+
+		<input type="radio"
+				name="deviceradio"
+				id="smartphone"><label for="smartphone">Smart Phone</label><br>
+		</div>
+		
+		<div class ="rcontainer">
+		Select your Operating System :
+
+		<input type="radio"
+				name="osRadio"
+				id="Windows-10"><label for="Windows-10">Windows 10</label><br>
+
+		<input type="radio"
+				name="osRadio"
+				id="Windows-8"><label for="Windows-8">Windows 8</label><br>
+
+		<input type="radio"
+				name="osRadio"
+				id="Windows-7"><label for="Windows-7">Windows 7</label><br>
+
+		<input type="radio"
+				name="osRadio"
+				id="macOS"><label for="macOS">Mac OS</label><br>
+
+		<input type="radio"
+				name="osRadio"
+				id="others"><label for="others">Android</label><br>
+
+		</div>
+		
+            <label>Demo Work Month / Playlist</label>
+            <input type="text" name="wnumber" id="wnumber" placeholder="ex: February 2020 / Physics 1st 3rd Chapter" required>
+        
+          <p class="full">
+            <label>Why we should give you a chance to join our Team?</label>
+            <textarea name="anwser" rows="5" id="anwser" placeholder="Enter your short Answer..." required></textarea>
+          </p><br>
+By clicking submit you agree to the terms and conditions of Apar's Classroom&copy; <wbr>and expressing the admin that you really want to be a part of Chat App&trade; Team.
+		</div>
+        <p class="full">
+            <button class="btn btn-success" type="submit">Submit</button>
+          </p>
+        </form>
+		<div class="alert">Your Form has been submitted.</div>
+      </div>
+    </div>
+  </div>
+  <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

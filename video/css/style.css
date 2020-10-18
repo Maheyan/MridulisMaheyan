@@ -1,0 +1,21 @@
+.host{
+	background-color: gray;
+}
+h1{
+	font-family: Comic Sans MS;
+	color: white;
+	text-align: center;
+}
+h3{
+	font-family: Times New Roman;
+	color: yellow;
+	text-align: center;
+}
+.description{
+	font-family: Kalpurush;
+	text-align: center;
+	color: #177B05FF;
+}
+.video{
+	position: Center;
+}

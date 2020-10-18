@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Your Perfect place for QnA">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apar's Classroom QnA Forum</title>
+
+  <!-- Disable tap highlight on IE -->
+  <meta name="msapplication-tap-highlight" content="no">
+
+  <!-- Add to homescreen for Chrome on Android -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="application-name" content="Apar's Classroom QnA Forum">
+  <meta name="theme-color" content="#303F9F">
+
+  <!-- Add to homescreen for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Firebase Database Quickstart">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#303F9F">
+
+  <!-- Tile icon for Win8 -->
+  <meta name="msapplication-TileColor" content="#3372DF">
+  <meta name="msapplication-navbutton-color" content="#303F9F">
+
+  <!-- Material Design Lite -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.blue_grey-orange.min.css">
+  <script src="https://code.getmdl.io/1.1.3/material.min.js"></script>
+
+  <!-- Bootstrap CSS -->
+  <!-- CSS only -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="main.css">
+
+</head>
+<body>
+
+<!-- <div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-header" -->>
+
+  <!-- Splash screen -->
+  <section id="page-splash">
+    <h3 class="logo">Apar's Classroom QnA Forum</h3>
+    <div>
+      <button id="sign-in-button" class="mdl-button--raised mdl-button mdl-js-button mdl-js-ripple-effect"><i class="material-icons">account_circle</i> Sign in with Google</button>
+    </div>
+  </section>
+ <nav class="navbar navbar-expand-md navbar-light fixed-top">
+             <h3 class="logo">Apar's QnA Forum&reg;</h3>
+             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                 <span class="navbar-toggler-icon"></span>
+             </button>
+             <div class="collapse navbar-collapse" id="navbarCollapse">
+                 <ul class="navbar-nav mr-auto">
+                     <li class="nav-item" active>
+                         <a class="nav-link" href="#">Home</a>
+                     </li>
+                     <li class="nav-item">
+                         <a class="nav-link" href="about.html">About Us</a>
+                     </li>
+
+
+                         <div class="tab mdl-layout__header-row mdl-color--light-blue-600">
+      <li class="nav-item">
+        <div id="menu-recent" class="mdl-layout__tab is-active mdl-button mdl-js-button mdl-js-ripple-effect">
+          <i class="material-icons">new_releases</i> Recent
+        </div>
+        </li>
+        <div id="menu-my-posts" class="mdl-layout__tab mdl-button mdl-js-button mdl-js-ripple-effect">
+          <i class="material-icons">home</i> My Questions
+        </div>
+        <div id="menu-my-top-posts" class="mdl-layout__tab mdl-button mdl-js-button mdl-js-ripple-effect">
+          <i class="material-icons">trending_up</i> My top Questions
+        </div>
+        <button class="mdl-button mdl-js-button mdl-button--fab mdl-color--amber-400 mdl-shadow--4dp mdl-js-ripple-effect" id="add">
+          <i class="material-icons">mode_edit</i>
+        </button>
+      </div>
+</ul>
+</div>
+      </nav>               
+
+
+
+
+
+
+
+
+
+
+                     <li class="nav-item">
+      <button id="sign-out-button" class="btn btn-dark"><i class="material-icons">account_circle</i> Sign out</button>
+                     </li>
+                     
+                 </ul>
+             </div>
+         </nav>
+
+  <!-- Header section containing logo and menu -->
+  <header class="header mdl-layout__header mdl-color-text--white mdl-color--light-blue-700">
+
+    <div class="mdl-layout__header-row titlebar">
+      <h3 class="logo">Apar's QnA Forum</h3>
+      <button id="sign-out-button" class="mdl-button--raised mdl-button mdl-js-button mdl-js-ripple-effect"><i class="material-icons">account_circle</i> Sign out</button>
+    </div>
+
+    <!-- Navigation Bar -->
+    <div class="tab mdl-layout__header-row mdl-color--light-blue-600">
+      <div class="mdl-tab">
+        <div id="menu-recent" class="mdl-layout__tab is-active mdl-button mdl-js-button mdl-js-ripple-effect">
+          <i class="material-icons">new_releases</i> Recent
+        </div>
+        <div id="menu-my-posts" class="mdl-layout__tab mdl-button mdl-js-button mdl-js-ripple-effect">
+          <i class="material-icons">home</i> My Questions
+        </div>
+        <div id="menu-my-top-posts" class="mdl-layout__tab mdl-button mdl-js-button mdl-js-ripple-effect">
+          <i class="material-icons">trending_up</i> My top Questions
+        </div>
+        <button class="mdl-button mdl-js-button mdl-button--fab mdl-color--amber-400 mdl-shadow--4dp mdl-js-ripple-effect" id="add">
+          <i class="material-icons">mode_edit</i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="mdl-layout__content mdl-color--grey-100">
+
+    <!-- Show the add post form -->
+    <section class="mdl-grid content" id="add-post" style="display:none">
+      <div class="mdl-cell mdl-cell--12-col mdl-grid">
+
+          <!-- Card containing the inputs to add a new messages -->
+          <div class="mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-cell--8-col-tablet
+                  mdl-cell--6-col-desktop">
+            <div class="mdl-card__title mdl-color--light-blue-600 mdl-color-text--white">
+              <h2 class="mdl-card__title-text">New Questions</h2>
+            </div>
+            <div class="mdl-card__supporting-text mdl-color-text--grey-600">
+              <form id="message-form" action="#">
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                  <input class="mdl-textfield__input" type="text" id="new-post-title">
+                  <label class="mdl-textfield__label" for="new-post-title">Add Topic</label>
+                </div>
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                  <textarea class="mdl-textfield__input" rows="3" id="new-post-message"></textarea>
+                  <label class="mdl-textfield__label" for="new-post-message">Enter your Question</label>
+                </div>
+                <button type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+                  Publish your Question
+                </button>
+              </form>
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Show a list of recent posts -->
+    <section class="mdl-grid content" id="recent-posts-list" style="display:none">
+      <div class="posts-container mdl-cell mdl-cell--12-col mdl-grid">
+      </div>
+    </section>
+
+    <!-- Show the list of user's posts -->
+    <section class="mdl-grid content" id="user-posts-list" style="display:none">
+      <div class="posts-container mdl-cell mdl-cell--12-col mdl-grid">
+      </div>
+    </section>
+
+    <!-- Show the list of top user's posts -->
+    <section class="mdl-grid content" id="top-user-posts-list" style="display:none">
+      <div class="posts-container mdl-cell mdl-cell--12-col mdl-grid">
+      </div>
+    </section>
+  </main>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+<script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebase/init.js"></script>
+<script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+apiKey: "AIzaSyDXbBWXz0I3bSBwY0anr9AdzjUYWrsE_8M",
+  authDomain: "story-mode-learning.firebaseapp.com",
+  databaseURL: "https://story-mode-learning.firebaseio.com",
+  projectId: "story-mode-learning",
+  storageBucket: "story-mode-learning.appspot.com",
+  messagingSenderId: "259152173161",
+  appId: "1:259152173161:web:65b3c9b2a212f589b92af8",
+  measurementId: "G-GMT12B0L63"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+</script>
+<script src="js/main.js"></script>
+</body>
+</html>

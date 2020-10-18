@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    	<title>Poster Generator | Apar's Classroom</title>
+    	<link rel="stylesheet" href="css/bootstrap.min.css">
+    	<style type="text/css">
+    		*{
+    			font-family: Comic Sans MS;
+    		}
+    		body {
+    			background-color: orange;
+    			color: white;
+    		}
+    	</style>
+    </head>
+    <body>
+    	<h1 align="center"><u>Poster Generator</u>&trade;</h1>
+    	<h3 align="center">powered by Apar's Classroom&copy;</h3>
+    	<div class="container">
+        <form action="https://v2.convertapi.com/convert/pdf/to/png?Secret=iVHBps0cLmqQXxvp&download=attachment" method="post" enctype="multipart/form-data">
+            <input class="form-control" type="file" name="File" value="">
+            <input  type="hidden" name="StoreFile" value="true">
+                        <input type="hidden" name="FileName" value="10MS_Poster">
+            <input type="hidden" name="ImageQuality" value="100" >
+						<br>
+            <input type="submit" class="btn btn-lg btn-primary btn-block" value="GET POSTER">
+        </form>
+    	</div>
+        <script src="js/jquery-3.5.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+    </body>
+</html>
