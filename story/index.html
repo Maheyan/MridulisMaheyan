@@ -1,84 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Story Mode Learning - Apar's Classroom</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
-  </head>
-  <body>
-    <div class="container">
-
-    <div class="wrapper">
-     
-      <div class="card front-face">
-        <img src="img/thumb/heart_thumb.jpg" alt="Thumbnail Image">
-      </div>
-      <div class="card back-face">
-        <img src="img/thumb/circle_heart.JPG" alt="Circle Image">
-        <div class="info">
-          <div class="title">Heart <3</div>
-          <p>ধাপে ধাপে হৃৎপিণ্ড <br>আঁকা শিখি</p>
-        </div class="visit">
-        <!-- <a href="#" class="g-ytsubscribe"  data-channelid="UC0CZ_JoktU8-mzfjbQfo4WQ" data-layout="default" data-count="default"></a> -->
-          <a href="story-mode/biology/heart-story.html">Let's Go</a>
-      </div>
-    </div>
-        <div class="wrapper">
-      <div class="card front-face">
-        <img src="#" alt="Thumbnail Image">
-      </div>
-      <div class="card back-face">
-        <img src="#" alt="Circle Image">
-        <div class="info">
-          <div class="title">Heart <3</div>
-          <p>ABCD and <br>EFGH</p>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Story Mode Learning App</title>
+    <link rel="stylesheet" href="css/splash.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.blue_grey-orange.min.css">
+    <script src="https://code.getmdl.io/1.1.3/material.min.js"></script>
+    <style>
+      #googlebtn {
+        margin-bottom: 20px;
+      }
+    </style>
+</head>
+<body>
+    <section id="page-splash">
+        <h3 class="logo">Apar's Story Mode<br> Learning App</h3>
+        <div>
+          <button id="googlebtn" onclick="GoogleLogin();" class="mdl-button--raised mdl-button mdl-js-button mdl-js-ripple-effect"><i class="material-icons">account_circle</i> Sign in with Google</button>     
         </div>
-        <ul>
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
-          <a href="#"><i class="fab fa-twitter"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          
-        </ul>
-      </div>
-    </div>
-            <div class="wrapper">
-      <div class="card front-face">
-        <img src="#" alt="Thumbnail Image">
-      </div>
-      <div class="card back-face">
-        <img src="#" alt="Circle Image">
-        <div class="info">
-          <div class="title">Map</div>
-          <p>JYUYTUY <br>FGHFGFGJ</p>
+        <div>
+          <button id="facebookbtn" onclick="facebookLogin();" class="mdl-button--raised mdl-button mdl-js-button mdl-js-ripple-effect"><i class="material-icons">account_circle</i> Sign in with facebook</button>     
         </div>
-        <ul>
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
-          <a href="#"><i class="fab fa-twitter"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-youtube"></i></a>
-        </ul>
-      </div>
-    </div>
-</div>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-<script src="https://apis.google.com/js/platform.js"></script>    
-<script src="https://kit.fontawesome.com/a076d05399.js"></script>
-
-
-
-      
-<!-- 
-<script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-app.js"></script>
-
-<script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-analytics.js"></script>
+        <br><br><br>
+        <h4>Already signed in?</h4>
+        <div>
+          <button id="alreadybtn" onclick="alreadyLogin();" class="mdl-button--raised mdl-button mdl-js-button mdl-js-ripple-effect">Click Here 🥰</button>     
+        </div>
+        <br><br><br>
+        <div class="declearation">
+        <h5>By proceeding you're agreeing to our <a href="terms.html">Terms</a> &amp; <a href="privacy.html">Privacy</a> Policies.</h5>
+        </div>
+      </section>
+<script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-auth.js"></script>
 
 <script>
-  // Your web app's Firebase configuration
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
   var firebaseConfig = {
     apiKey: "AIzaSyDXbBWXz0I3bSBwY0anr9AdzjUYWrsE_8M",
     authDomain: "story-mode-learning.firebaseapp.com",
@@ -89,11 +47,7 @@
     appId: "1:259152173161:web:65b3c9b2a212f589b92af8",
     measurementId: "G-GMT12B0L63"
   };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  firebase.analytics();
-
-</script> -->
-
-  </body>
+</script>
+<script src="js/auth.js"></script>
+</body>
 </html>

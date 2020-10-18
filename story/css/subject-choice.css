@@ -1,0 +1,55 @@
+* {
+	font-family:  'Montserrat', sans-serif;
+}
+
+
+.button-div {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+} 
+.button-div a{
+	display: inline-flex;
+	width: 320px;
+	position: relative;
+	margin: 5px;
+	height: 80px;
+	font-weight: 900;
+	color: white;
+	border-radius: 60px;
+	background-image: linear-gradient(to right, #039BE5, #01579b);
+	font-size: normal;
+	justify-content: center;
+	align-items: center;
+	justify-content: center;
+	text-decoration: none;
+	transition: 0.5s;
+}
+.button-div a:hover{
+	color: #fff;
+}
+
+.button-div a:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0;
+	height: 100%;
+	background: url(../img/btn/btn-bg.png);
+	background-size: cover;
+	transform-origin: left;
+	transition: 0.5s;
+}
+
+
+.button-div a:hover::before {
+	width: 100%;
+	color: #fff;
+}
+
+.button-div a span {
+	position: relative;
+	z-index: 1;
+
+}

@@ -1,18 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:ital,wght@1,600&display=swap');
+
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family:  'Montserrat', sans-serif;
 }
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background-color: #fff;
-  background-attachment: fixed;
-}
+
 .container {
   position: relative;
   max-width: 1000px;
@@ -35,14 +27,13 @@ body {
   transform-style: preserve-3d;
 	perspective: 1000px;
 }
-.container .wrapper .card{
+.wrapper .card{
   position: absolute;
   height: 100%;
   width: 100%;
-  padding: 0;
+  padding: 5px;
   background: #fff;
   border-radius: 15px;
-  overflow: hidden;
   transform: translateY(0deg);
   backface-visibility: hidden;
   transform-style: preserve-3d;
@@ -72,7 +63,6 @@ body {
   height: 150px;
   width: 150px;
   padding: 5px;
-  margin-top: 20px;
   border-radius: 50%;
   background: radial-gradient(circle, #039BE5, #01579b);
 }
@@ -83,21 +73,24 @@ body {
   font-size: 30px;
   font-weight: 500;
 }
-
-.back-face a{
-  position: relative;
-  display: inline-block;
-  padding: 10px 20px;
-  margin-bottom: 10px;
-  background-image: linear-gradient(to right, #039BE5, #01579b);
-  color: #fff;
-  border-radius: 40px;
-  text-decoration: none;
-  margin-top: 20px;
+.back-face ul{
+  display: flex;
 }
-.back-face a:hover{
+.back-face ul a{
+  display: block;
+  height: 40px;
+  width: 40px;
+  color: #fff;
+  text-align: center;
+  margin: 0 5px;
+  line-height: 38px;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  background: radial-gradient(circle,  #039BE5,  #01579b);
+  transition: all 0.5s ease;
+}
+.back-face ul a:hover{
   color: #039BE5;
-  font-weight: bold;
-  border: 1px solid  #01579b;
-  background-image: linear-gradient(to right, #fff, #ffe1fe);
+  border-color:  #01579b;
+  background: radial-gradient(circle, transparent, transparent);
 }
