@@ -1,0 +1,31 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family:  'Montserrat', sans-serif;
+}
+
+.featurette-heading, .navbar-brand {
+	font-family:  'Poppins', sans-serif;
+}
+
+.bg-grad {
+	background-color: #f0f0f0;
+}
+
+.featurette-heading {
+	text-align: center;
+}
+.container .btn {
+	margin-bottom: 10px;
+	border-radius: 60px
+}
+
+.container .btn:hover {
+	font-weight: bold;
+	/*color : black;*/
+	/*background-color: #f0f0f0;*/
+}
+.navbar .btn {
+	margin: 4px;
+}
