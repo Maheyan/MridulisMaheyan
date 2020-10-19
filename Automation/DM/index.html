@@ -8,7 +8,8 @@
 
          <title>DM Team | Automation Dept.&reg;</title>
  
-         <!-- Bootstrap core CSS -->
+     <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-auth.js"></script>
         
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:ital,wght@1,600&display=swap">
@@ -34,6 +35,7 @@
               <a class="nav-link" href="../colorpicker/color.html">Color Picker&copy;</a>
             </li>
           </ul>
+            <button class="btn btn-outline-danger" type="button" onclick="mainApp.logOut();">Log Out</button>
         </div>
       </nav>
  <br>
@@ -196,11 +198,27 @@
     </div>
          </div><!-- /.container -->
 
-         <!-- Bootstrap core JavaScript
-         ================================================== -->
-         <!-- Placed at the end of the document so the pages load faster -->
-                 <!-- JS, Popper.js, and jQuery -->
 
+    <script src="../js/firebase.js"></script>
+    <script>
+      var mainApp = {};
+(function() {
+    var firebase = app_firebase;
+var uid = null;
+firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
+    // User is signed in.
+    uid = user.uid;
+  }else {
+      window.location.replace("../login.html");
+  }
+});
+    function logOut(){
+        firebase.auth().signOut();
+    }
+    mainApp.logOut = logOut;
+})()
+    </script>
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
