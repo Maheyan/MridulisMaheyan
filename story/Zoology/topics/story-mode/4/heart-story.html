@@ -3,56 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Learn how to draw Heart by Story</title>
+    <title>Heart Story</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-   
-    <style type="text/css">
-    body {
-        background-color: #ffe1fe;
-    }
-        .carousel-control-prev-icon, .carousel-control-next-icon  {
-            background-color: #6969697e;
-        }
-        .carousel-indicators {
-            background-color: #6969697e;
-        }
-        img {
-            width: 100%;
-            height: 812px;
-        }
-        video {
-            width: 100%;
-            height: 812px;
-        }
-        .carousel-caption{
-            display: flex; 
-            justify-content: center;
-        }
-        .btn{
-            position: relative;
-            display: inline-block;
-            padding: 10px 20px;
-            border-radius: 15px;
-            margin: 10px;
-        }
-    </style>
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-auth.js"></script>
+    <link rel="stylesheet" href="../../../../css/story.css">
 </head>
 <body>
-    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel" data-interval="100000">
+    <div id="carouselFade" class="carousel slide carousel-fade" data-ride="carousel" data-interval="100000">
     <ol class="carousel-indicators">
-        <li data-target="#carouselExampleFade" data-slide-to="0" class="active"></li>
-        <li data-target="#carouselExampleFade" data-slide-to="1"></li>
-        <li data-target="#carouselExampleFade" data-slide-to="2"></li>
-        <li data-target="#carouselExampleFade" data-slide-to="3"></li>
-        <li data-target="#carouselExampleFade" data-slide-to="4"></li>
-        <li data-target="#carouselExampleFade" data-slide-to="5"></li>
-        <li data-target="#carouselExampleFade" data-slide-to="6"></li>
-        <li data-target="#carouselExampleFade" data-slide-to="7"></li>
-        <li data-target="#carouselExampleFade" data-slide-to="8"></li>
-        <li data-target="#carouselExampleFade" data-slide-to="9"></li>
-        <li data-target="#carouselExampleFade" data-slide-to="10"></li>
-        <li data-target="#carouselExampleFade" data-slide-to="11"></li>
-        <li data-target="#carouselExampleFade" data-slide-to="12"></li>
+        <li data-target="#carouselFade" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselFade" data-slide-to="1"></li>
+        <li data-target="#carouselFade" data-slide-to="2"></li>
+        <li data-target="#carouselFade" data-slide-to="3"></li>
+        <li data-target="#carouselFade" data-slide-to="4"></li>
+        <li data-target="#carouselFade" data-slide-to="5"></li>
+        <li data-target="#carouselFade" data-slide-to="6"></li>
+        <li data-target="#carouselFade" data-slide-to="7"></li>
+        <li data-target="#carouselFade" data-slide-to="8"></li>
+        <li data-target="#carouselFade" data-slide-to="9"></li>
+        <li data-target="#carouselFade" data-slide-to="10"></li>
+        <li data-target="#carouselFade" data-slide-to="11"></li>
+        <li data-target="#carouselFade" data-slide-to="12"></li>
     </ol>
     <div class="carousel-inner">
         <div class="carousel-item active">
@@ -107,16 +79,32 @@
             </div>
            
     </div>
-    <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
+    <a class="carousel-control-prev" href="#carouselFade" role="button" data-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="sr-only">Previous</span>
     </a>
-    <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
+    <a class="carousel-control-next" href="#carouselFade" role="button" data-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="sr-only">Next</span>
     </a>
 </div>
 </div>
+<script src="../../../../js/firebase.js"></script>
+<script>
+    var mainApp = {};
+(function() {
+    var firebase = app_firebase;
+var uid = null;
+firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
+    // User is signed in.
+    uid = user.uid;
+  }else {
+      window.location.replace("../../../../index.html");
+  }
+});
+})()
+</script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>

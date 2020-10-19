@@ -16,6 +16,13 @@
     color: white;
     flex-direction: column;
 }
+#alreadybtn {
+    background: #fff;
+}
+#alreadybtn:hover {
+    background: pink;
+    color: black;
+}
 
 #page-splash h3,
 #page-splash h5 {
@@ -23,4 +30,7 @@
     margin: 30px;
     text-align: center;
 }
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:ital,wght@1,600&display=swap');
+.declearation h5 {
+    font-family:  'Montserrat', sans-serif;
+}

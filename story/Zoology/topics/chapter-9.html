@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Chapter 9 - Story Mode Learning</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-auth.js"></script>
   </head>
   <body>
     <nav class="navbar fixed-top navbar-dark" style="background-image: linear-gradient(to left, #039BE5, #01579b);">
@@ -21,6 +23,8 @@
             <li class="nav-item">
               <a class="nav-link" href="../../about.html">About Us</a>
             </li>
+          </ul>
+          <button class="btn btn-outline-danger" onclick="mainApp.logOut();">Log Out</button>
         </div>
     </nav>
     <div class="container">
@@ -87,5 +91,25 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 <script src="https://apis.google.com/js/platform.js"></script>    
 <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<script src="../../js/firebase.js"></script>
+<script>
+    var mainApp = {};
+(function() {
+    var firebase = app_firebase;
+var uid = null;
+firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
+    // User is signed in.
+    uid = user.uid;
+  }else {
+      window.location.replace("../../index.html");
+  }
+});
+    function logOut(){
+        firebase.auth().signOut();
+    }
+    mainApp.logOut = logOut;
+})()
+</script>
   </body>
 </html>

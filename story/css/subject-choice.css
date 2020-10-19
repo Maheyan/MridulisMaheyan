@@ -1,8 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:ital,wght@1,600&display=swap');
 * {
 	font-family:  'Montserrat', sans-serif;
 }
-
-
 .button-div {
 	display: flex;
 	align-items: center;
