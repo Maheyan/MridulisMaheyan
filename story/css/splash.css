@@ -16,14 +16,6 @@
     color: white;
     flex-direction: column;
 }
-#alreadybtn {
-    background: #fff;
-}
-#alreadybtn:hover {
-    background: pink;
-    color: black;
-}
-
 #page-splash h3,
 #page-splash h5 {
     display: block;
