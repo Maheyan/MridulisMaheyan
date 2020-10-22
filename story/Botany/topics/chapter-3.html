@@ -93,24 +93,6 @@
 <script src="https://apis.google.com/js/platform.js"></script>    
 <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 <script src="../../js/firebase.js"></script>
-<script>
-    var mainApp = {};
-(function() {
-    var firebase = app_firebase;
-var uid = null;
-firebase.auth().onAuthStateChanged(function(user) {
-  if (user) {
-    // User is signed in.
-    uid = user.uid;
-  }else {
-      window.location.replace("../../index.html");
-  }
-});
-    function logOut(){
-        firebase.auth().signOut();
-    }
-    mainApp.logOut = logOut;
-})()
-</script>
+<script src="../../js/chapter.js"></script>
   </body>
 </html>

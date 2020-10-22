@@ -33,13 +33,13 @@
     <div class="wrapper">
      
       <div class="card front-face">
-        <img src="../../img/#" alt="Thumbnail Image of Topic 1">
+        <img src="../../img/thumb/Botany/5/story/Structure-of-ulothrix/ulothrix-thumb.jpg" alt="Thumbnail Image of Topic 1">
       </div>
       <div class="card back-face">
-        <img src="../../img/#" alt="Circle Image Topic 1">
+        <img src="../../img/thumb/Botany/5/story/Structure-of-ulothrix/ulothrix-circle.jpg" alt="Circle Image Topic 1">
         <div class="info">
-          <div class="title">Title</div>
-          <p>description<br>more description</p>
+          <div class="title">Ulothrix</div>
+          <p>Learn HOW TO DRAW<br>the Structure of <strong>Ulothrix</strong></p>
         </div class="visit">
           <a href="story-mode/5/story1.html">Let's Go</a>
       </div>
@@ -47,15 +47,15 @@
     <div class="wrapper">
      
       <div class="card front-face">
-        <img src="#" alt="Thumbnail Image Topic 2">
+        <img src="../../img/thumb/Botany/5/story/Asexual-reproduction-of-Ulotrix/asexual-ulothrix-thumb.jpg" alt="Thumbnail Image Topic 2">
       </div>
       <div class="card back-face">
-        <img src="#" alt="Circle Image Topic 2">
+        <img src="../../img/thumb/Botany/5/story/Asexual-reproduction-of-Ulotrix/asexual-ulothrix-circle.jpg" alt="Circle Image Topic 2">
         <div class="info">
-          <div class="title">Title</div>
-          <p>description<br>more description</p>
+          <div class="title">Asexual Reproduction</div>
+          <p>Learn HOW TO DRAW<br>Asexual Reproduction of <strong>Ulothrix</strong></p>
         </div class="visit">
-          <a href="#">Let's Go</a>
+          <a href="story-mode/5/story2.html">Let's Go</a>
       </div>
     </div>
     <div class="wrapper">
@@ -92,25 +92,7 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 <script src="https://apis.google.com/js/platform.js"></script>    
 <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-<script src="../../js/firebase.js"></script>
-<script>
-    var mainApp = {};
-(function() {
-    var firebase = app_firebase;
-var uid = null;
-firebase.auth().onAuthStateChanged(function(user) {
-  if (user) {
-    // User is signed in.
-    uid = user.uid;
-  }else {
-      window.location.replace("../../index.html");
-  }
-});
-    function logOut(){
-        firebase.auth().signOut();
-    }
-    mainApp.logOut = logOut;
-})()
-</script>
+<!-- <script src="../../js/firebase.js"></script> -->
+<script src="../../js/chapter.js"></script>
   </body>
 </html>

@@ -33,10 +33,10 @@
     <div class="wrapper">
      
       <div class="card front-face">
-        <img src="../../img/#" alt="Thumbnail Image of Topic 1">
+        <img src="#" alt="Thumbnail Image Topic 1">
       </div>
       <div class="card back-face">
-        <img src="../../img/#" alt="Circle Image Topic 1">
+        <img src="#" alt="Circle Image Topic 1">
         <div class="info">
           <div class="title">Title</div>
           <p>description<br>more description</p>
@@ -93,24 +93,6 @@
 <script src="https://apis.google.com/js/platform.js"></script>    
 <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 <script src="../../js/firebase.js"></script>
-<script>
-    var mainApp = {};
-(function() {
-    var firebase = app_firebase;
-var uid = null;
-firebase.auth().onAuthStateChanged(function(user) {
-  if (user) {
-    // User is signed in.
-    uid = user.uid;
-  }else {
-      window.location.replace("../../index.html");
-  }
-});
-    function logOut(){
-        firebase.auth().signOut();
-    }
-    mainApp.logOut = logOut;
-})()
-</script>
+<script src="../../js/chapter.js"></script>
   </body>
 </html>
