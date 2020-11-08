@@ -1,0 +1,25 @@
+
+	#g {background:black;
+	margin:auto;
+	display:block;
+	}
+
+	.btn {
+		background-image: linear-gradient(60deg, #0093E9 0%, #80D0C7 100%);
+		display: block;
+		margin-top: 10px;
+		margin-left: auto;
+		margin-right: auto;
+		padding: 20px;
+		color: #fff;
+		border-radius: 40px;
+		text-align: center;
+		border: 1px solid #fff;
+		cursor: pointer;
+		transition-delay: 0.2s;
+	}
+	.btn:hover {
+		background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+		border-color: #000;
+		color: #000;
+	}
