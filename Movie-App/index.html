@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taqdeer</title>
+    <link rel="shortcut icon" href="https://1.bp.blogspot.com/-TC1lAGZ3ZS0/X9wysZCPYGI/AAAAAAAAYQU/lfio2BpSBtwY0Q_kyOGukx78NR9xDegVwCLcBGAsYHQ/w320-h310/Taqdeer%2BWeb%2BSeries%2BDownload%2B%2526%2BWatch%2BOnline.webp" type="image/x-icon">
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-analytics.js"></script>
+<script src="js/firebase.js"></script>
+            <!-- Facebook Metas -->
+            <meta property="og:title" content="Taqdeer">
+            <meta property="og:site_name" content="Taqdeer">
+            <meta property="og:description" content="Season 1">
+            <meta property="og:image" content="https://1.bp.blogspot.com/-TC1lAGZ3ZS0/X9wysZCPYGI/AAAAAAAAYQU/lfio2BpSBtwY0Q_kyOGukx78NR9xDegVwCLcBGAsYHQ/w320-h310/Taqdeer%2BWeb%2BSeries%2BDownload%2B%2526%2BWatch%2BOnline.webp">
+            <meta property="og:image:secure_url" content="https://1.bp.blogspot.com/-TC1lAGZ3ZS0/X9wysZCPYGI/AAAAAAAAYQU/lfio2BpSBtwY0Q_kyOGukx78NR9xDegVwCLcBGAsYHQ/w320-h310/Taqdeer%2BWeb%2BSeries%2BDownload%2B%2526%2BWatch%2BOnline.webp">
+            <meta property="og:image:type" content="image/png">
+            <meta property="og:image:width" content="1200">
+            <meta property="og:image:height" content="627">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: black;
+        }
+        h1 {
+            margin-top: 20px;
+            text-align: center;
+            color: brown;
+        }
+        .col-sm {
+            margin-bottom: 10px;
+        }
+        #search {
+            background-color: transparent;
+            color: #fff;
+        }
+        .form-control::-webkit-input-placeholder {
+  color: #fff;
+}
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+        <a class="navbar-brand" href="#">Taqdeer</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbar">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="https://facebook.com/MridulisMaheyan">Credit <span class="sr-only">(current)</span></a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" id="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-dark my-2 my-sm-0" type="button" onclick="mainApp.logOut();">Log Out</button>
+          </form>
+        </div>
+      </nav>
+    <div class="container">
+        <h1>Taqdeer Season 1 (Full)</h1>
+        <div id="taqdeerS1" class="mt-3">
+        <div class="row">
+            <div class="col-sm">
+                <a type="button" href="Season1/ep1.html" class="btn btn-block btn-outline-danger">Episode 1 (Rashatal)</a>
+                <a type="button" href="Season1/ep2.html" class="btn btn-block btn-outline-danger">Episode 2 (Raadbadal)</a>
+                <a type="button" href="Season1/ep3.html" class="btn btn-block btn-outline-danger">Episode 3 (Ranakhetra)</a>
+                <a type="button" href="Season1/ep4.html" class="btn btn-block btn-outline-danger">Episode 4 (Gandham)</a>
+            </div>
+            <div class="col-sm">
+        <a type="button" href="Season1/ep5.html" class="btn btn-block btn-outline-danger">Episode 5 (Barafkal)</a>
+        <a type="button" href="Season1/ep6.html" class="btn btn-block btn-outline-danger">Episode 6 (Barkhelap)</a>
+        <a type="button" href="Season1/ep7.html" class="btn btn-block btn-outline-danger">Episode 7 (Prayeshchitto)</a>
+        <a type="button" href="Season1/ep8.html" class="btn btn-block btn-outline-danger">Episode 8 (Pulsirat)</a>
+            </div>
+          </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script>
+    $(document).ready(function(){
+      $("#search").on("keyup", function() {
+        var value = $(this).val().toLowerCase();
+        $("#taqdeerS1 *").filter(function() {
+          $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+      });
+    });
+    var mainApp = {};
+(function() {
+    var firebase = app_firebase;
+var uid = null;
+firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
+    uid = user.uid;
+  }else {
+      window.location.replace("login.html");
+  }
+});
+function logOut(){
+        firebase.auth().signOut();
+    }
+    mainApp.logOut = logOut;
+})()
+    </script>
+</body>
+</html>
