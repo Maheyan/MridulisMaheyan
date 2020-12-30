@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Episode 1 | Taqdeer</title>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-analytics.js"></script>
+<script src="../js/firebase.js"></script>
+        <!-- Facebook Metas -->
+        <meta property="og:title" content="Taqdeer">
+        <meta property="og:site_name" content="Taqdeer">
+        <meta property="og:description" content="Season 1 | Episode 1 (Rashatal)">
+        <meta property="og:image" content="https://1.bp.blogspot.com/-TC1lAGZ3ZS0/X9wysZCPYGI/AAAAAAAAYQU/lfio2BpSBtwY0Q_kyOGukx78NR9xDegVwCLcBGAsYHQ/w320-h310/Taqdeer%2BWeb%2BSeries%2BDownload%2B%2526%2BWatch%2BOnline.webp">
+        <meta property="og:image:secure_url" content="https://1.bp.blogspot.com/-TC1lAGZ3ZS0/X9wysZCPYGI/AAAAAAAAYQU/lfio2BpSBtwY0Q_kyOGukx78NR9xDegVwCLcBGAsYHQ/w320-h310/Taqdeer%2BWeb%2BSeries%2BDownload%2B%2526%2BWatch%2BOnline.webp">
+        <meta property="og:image:type" content="image/png">
+        <meta property="og:image:width" content="1200">
+        <meta property="og:image:height" content="627">
+    <link rel="shortcut icon" href="https://1.bp.blogspot.com/-TC1lAGZ3ZS0/X9wysZCPYGI/AAAAAAAAYQU/lfio2BpSBtwY0Q_kyOGukx78NR9xDegVwCLcBGAsYHQ/w320-h310/Taqdeer%2BWeb%2BSeries%2BDownload%2B%2526%2BWatch%2BOnline.webp" type="image/x-icon">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: black;
+        }
+        h1 {
+            margin-top: 20px;
+            text-align: center;
+            color: brown;
+        }
+        .col-sm {
+            margin-bottom: 10px;
+        }
+        #search {
+            background-color: transparent;
+            color: #fff;
+        }
+        .form-control::-webkit-input-placeholder {
+  color: #fff;
+}
+.container {
+    margin-bottom: 50px;
+}
+video::-webkit-media-controls-volume-slider {
+display:none;
+}
+
+video::-webkit-media-controls-mute-button {
+display:none;
+}
+.controls {
+    text-align: center;
+}
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+        <a class="navbar-brand" href="../index.html">Taqdeer</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbar">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="https://facebook.com/MridulisMaheyan">Credits <span class="sr-only">(current)</span></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    <div class="container">
+        <h1>Episode 1 (Rashatal)</h1>
+        <video width="100%" controls oncontextmenu="return false;" id="taqs1" disablePictureInPicture controlsList="nodownload">
+            <source src="https://www.dropbox.com/s/a26alyvcl7dk2yc/Taqdeer%20S01E01.mkv?raw=1" type="video/mp4" />
+            </video>
+            <div class="controls">
+            <button class="btn btn-outline-danger" id="vidbutton">Play</button>
+            <button class="btn btn-outline-danger" onclick="goFullscreen('taqs1'); return false">Fullscreen</button>
+        <button id="mutebtn" class='btn btn-outline-danger' onclick='mute();'>Mute</button>
+              <button id="vol" class='btn btn-outline-danger' onclick="showvol()">Volume Controls</button>
+              <button id="hdvol" style="display: none;" class='btn btn-outline-danger' onclick="hidevol()">Hide Volume Controls</button>
+              <input type="range" style="display: none;" id="volume-control">
+        <a href="../index.html" class='btn btn-outline-dark'>Return</a>
+    </div>
+</div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script>
+    var ppbutton = document.getElementById("vidbutton");
+ppbutton.addEventListener("click", playPause);
+taqvid = document.getElementById("taqs1");
+function playPause() { 
+    if (taqvid.paused) {
+        taqvid.play();
+        ppbutton.innerHTML = "Pause";
+        }
+    else  {
+        taqvid.pause(); 
+        ppbutton.innerHTML = "Play";
+        }
+} 
+var volbtn = document.getElementById("vol");
+function showvol() {
+    var range = document.getElementById("volume-control");
+    range.style.display = "inline-block";
+    vol.style.display = "none";
+    hdvol.style.display = "inline-block";
+}
+var volbtn = document.getElementById("hdvol");
+function hidevol() {
+    var range = document.getElementById("volume-control");
+    range.style.display = "none";
+    vol.style.display = "inline-block";
+    hdvol.style.display = "none";
+}
+
+
+var vid = document.getElementById("taqs1");
+var mutebtn = document.getElementById("mutebtn");
+function mute() { 
+  if (vid.volume != 0) {
+    vid.volume = 0;
+    mutebtn.innerText = "Unmute";
+  }else {
+    vid.volume = 0.5;
+    mutebtn.innerText = "Mute";
+  }
+} 
+let volume = document.querySelector("#volume-control");
+volume.addEventListener("change", function(e) {
+    vid.volume = e.currentTarget.value / 100;
+})
+function goFullscreen(taqs1) {
+  var element = document.getElementById(taqs1);       
+  if (element.mozRequestFullScreen) {
+    element.mozRequestFullScreen();
+  } else if (element.webkitRequestFullScreen) {
+    element.webkitRequestFullScreen();
+  }  
+}
+var mainApp = {};
+(function() {
+    var firebase = app_firebase;
+var uid = null;
+firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
+    uid = user.uid;
+  }else {
+      window.location.replace("../login.html");
+  }
+});
+})()
+document.addEventListener("contextmenu", function(e) {
+  e.preventDefault();
+});
+</script>
+</script>
+</body>
+</html>
