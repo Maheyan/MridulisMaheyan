@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ACP Result</title>
+	<link rel="stylesheet" type="text/css" href="https://oiratul.xyz/project/ACP3/styles.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+<style>
+
+	.round {
+  background-color: #2F8910;
+  color: white;
+  text-align: center;
+  border-radius: 1vh;
+  width: 18vh
+}
+	</style>
+<meta name="viewport" 
+content="width=device-width, height=device-height, initial-scale=1">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+setTimeout(function () {
+        let viewheight = $(window).height();
+        let viewwidth = $(window).width();
+        let viewport = document.querySelector("meta[name=viewport]");
+        viewport.setAttribute("content", "height=" + viewheight + "px, width=" + viewwidth + "px, initial-scale=1.0");
+    }, 300);
+	</script>
+</head>
+<body>
+	<div class="sob" id="sob">
+<div class="content" style="margin-top: 15vh;">
+	<b><div style="font-size: 15vh">ACP</div></b>
+	<div style="font-size: 7vh;line-height: 6vh">CHALLENGE</div>
+	<div style="font-size: 7vh">RESULTS</div>
+
+
+
+		<input id="roll" class="box" style="margin-top: 8vh" type="number" name="roll" placeholder="Enter Roll:"><br>
+		<select id="chall" class="box" name="chall">
+			<option disabled selected value>Select Challenge</option>
+			<option value="207">Challenge 207</option>
+			<option value="208">Challenge 208</option>
+		</select><br>
+
+		<button onclick="sobkichu()" style="margin-top: 2vh; background-color: #ffffff; height: 8vh; width: 15vh;border: 2px solid #2F8910;
+box-sizing: border-box;
+border-radius: 5px; font-size: 2.5vh; color: #2F8910; margin-left: 25vh; cursor: pointer;">Submit</button>
+	
+</div>
+
+
+
+
+
+
+  
+
+       </div>
+
+       <!---result---->
+
+       <div class="sob2" style="display: none" id="sob2">
+       	<div>
+	<div style="padding: 3vh 0vh 0vh 1vh "><svg style="cursor: pointer;" onclick="rev()" style="margin-left: 2vh" style="display: inline-block;" width="15" height="25" viewBox="0 0 20 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M17 3L3 17.9888L17 32" stroke="#2F8910" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+<div style="display: inline-block; font-size: 3.5vh; margin-top: -2.3vh; margin-left: 2vh; vertical-align: middle;">Result</div> </div>
+<p id="demo"></p>
+<script type="text/javascript" src="dics.json"></script>
+<script type="text/javascript">
+    var obj = JSON.parse(contacts);
+    console.log("obj");
+    </script>
+<script>
+var obj = JSON.parse('{ "name":"John", "age":30, "city":"New York"}');
+document.getElementById("demo").innerHTML = obj.name + ", " + obj.age;
+</script>
+<table cellspacing="15"  style="font-size: 3vh; margin-top: 25px">
+
+			<tr>
+					<td class="round">Rank </td>
+					<td id="rank"></td>
+				</tr>
+
+				<tr>
+					<td class="round">Name </td>
+					<td id="name"></td>
+				</tr>
+
+				<tr>
+					<td class="round">Collage </td>
+					<td id="college">rthrh</td>
+				</tr>
+
+				<tr>
+					<td class="round">Team </td>
+					<td id="Team">dhth</td>
+				</tr>
+			
+				<tr>
+					<td class="round">Star Marks </td>
+					<td id="Star"></td>
+				</tr>
+
+				<tr>
+					<td class="round">Score </td>
+					<td id="Score"></td>
+				</tr>
+
+				<tr>
+					<td class="round">Assignment </td>
+					<td id="Assignment"></td>
+				</tr>
+
+				<tr>
+					<td class="round">Exam </td>
+					<td id="Exam"></td>
+				</tr>
+
+				<tr>
+					<td class="round">Note </td>
+					<td id="Note"></td>
+				</tr>
+
+				
+
+				<tr>
+					<td class="round">Video </td>
+					<td id="Video"></td>
+				</tr>
+
+				<tr>
+					<td class="round">Time </td>
+					<td id="Time"></td>
+				</tr>
+
+				
+			
+        </table>
+        
+
+</div>
+       </div>
+
+<script type="text/javascript" src="data.json"></script>
+
+<script type="text/javascript">
+
+	var mydata = JSON.parse(data);
+
+	mydata = JSON.parse(JSON.stringify(mydata).split('"10":').join('"rank":'));
+	mydata = JSON.parse(JSON.stringify(mydata).split('"11":').join('"roll":'));
+	mydata = JSON.parse(JSON.stringify(mydata).split('"12":').join('"name":'));
+	mydata = JSON.parse(JSON.stringify(mydata).split('"13":').join('"college":'));
+	mydata = JSON.parse(JSON.stringify(mydata).split('"14":').join('"team":'));
+	mydata = JSON.parse(JSON.stringify(mydata).split('"15":').join('"video":'));
+	mydata = JSON.parse(JSON.stringify(mydata).split('"16":').join('"note":'));
+	mydata = JSON.parse(JSON.stringify(mydata).split('"17":').join('"Assignment":'));
+	mydata = JSON.parse(JSON.stringify(mydata).split('"18":').join('"Exam":'));
+	mydata = JSON.parse(JSON.stringify(mydata).split('"19":').join('"Time":'));
+	mydata = JSON.parse(JSON.stringify(mydata).split('"20":').join('"Score":'));
+	mydata = JSON.parse(JSON.stringify(mydata).split('"21":').join('"Star":'));
+	
+	
+
+
+	var raw;
+	var can_see = true;
+
+ function sobkichu() {
+ 	var roll = document.getElementById("roll").value;
+	var chall = document.getElementById("chall").value;
+
+	if (!roll) {
+		alert("Please enter roll!");
+	}
+ 	else if (!chall) {
+		alert("Please select challenge!");
+	} else {
+
+
+		var len = mydata.length;
+
+    for(var i = 0; i < len; i++) {
+    	if ((parseInt(mydata[i].roll)) == roll) {
+    		raw = i;
+    		can_see = true;
+    		break;
+    	}
+
+    	if (i +1 == len) {
+    		if ((parseInt(mydata[i].roll)) != roll || !raw) {
+    			alert("Result not found!");
+    			can_see = false;
+    		}
+    	}
+
+    }
+
+    document.getElementById("rank").innerHTML = mydata[raw].rank;
+    if (document.getElementById("rank").innerHTML == "") {
+    	document.getElementById("rank").innerHTML = "NO RANK";
+    } else {
+    	document.getElementById("rank").innerHTML = mydata[raw].rank;
+ 	 }
+
+ 	 document.getElementById("Time").innerHTML = mydata[raw].Time;
+ 	 if (document.getElementById("Time").innerHTML == "") {
+    	document.getElementById("Time").innerHTML = "NO TIME";
+    } else {
+    	document.getElementById("Time").innerHTML = mydata[raw].Time;
+ 	 }
+
+
+ 	 document.getElementById("name").innerHTML = mydata[raw].name;
+
+ 	 document.getElementById("college").innerHTML = mydata[raw].college;
+
+ 	 document.getElementById("Team").innerHTML = mydata[raw].team;
+
+ 	 document.getElementById("Star").innerHTML = mydata[raw].Star;
+
+ 	 document.getElementById("Score").innerHTML = mydata[raw].Score;
+
+ 	 document.getElementById("Assignment").innerHTML = mydata[raw].Assignment;
+
+ 	 document.getElementById("Exam").innerHTML = mydata[raw].Exam;
+
+ 	 document.getElementById("Note").innerHTML = mydata[raw].note;
+
+ 	 document.getElementById("Video").innerHTML = mydata[raw].video;
+
+		if (can_see) {
+			document.getElementById("sob").style.display = "none";
+    document.getElementById("sob2").style.display = "block";
+		}
+    
+
+	}
+
+	
+ }
+
+
+ function rev() {
+ 	document.getElementById("sob").style.display = "block";
+    document.getElementById("sob2").style.display = "none";
+    document.getElementById("rank").innerHTML = "";
+    document.getElementById("Time").innerHTML = "";
+ }	
+</script> 
+
+
+</body>
+</html>

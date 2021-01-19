@@ -36,15 +36,24 @@
       
 
  </div>
- <script type="text/javascript">
-/* NOTE : Use web server to view HTML files as real-time update will not work if you directly open the HTML file in the browser. */
-(function(d, m){
-var kommunicateSettings = {"appId":"3ba7200bc36c1f1d5376314eabed83924","popupWidget":true,"automaticChatOpenOnNavigation":true};
-var s = document.createElement("script"); s.type = "text/javascript"; s.async = true;
-s.src = "https://widget.kommunicate.io/v2/kommunicate.app";
-var h = document.getElementsByTagName("head")[0]; h.appendChild(s);
-window.kommunicate = m; m._globals = kommunicateSettings;
-})(document, window.kommunicate || {});
-</script>
+ <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+ <script>
+   const options = {
+  bottom: '64px', // default: '32px'
+  right: '32px', // default: '32px'
+  left: 'unset', // default: 'unset'
+  time: '0.5s', // default: '0.3s'
+  mixColor: '#fff', // default: '#fff'
+  backgroundColor: '#fff',  // default: '#fff'
+  buttonColorDark: '#100f2c',  // default: '#100f2c'
+  buttonColorLight: '#fff', // default: '#fff'
+  saveInCookies: true, // default: true,
+  label: '🌓', // default: ''
+  autoMatchOsTheme: true // default: true
+}
+const darkmode = new Darkmode(options);
+darkmode.showWidget();
+   window.addEventListener('load', addDarkmodeWidget);
+ </script>
 </body>
 </html>

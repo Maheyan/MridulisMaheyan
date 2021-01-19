@@ -1,9 +1,0 @@
-
-/* custom thumbnail size */
-
-@media screen and (max-width: 1800px) {
-   .thumb img {
-      width: 200px;
-      height: auto;
-   }
-}
