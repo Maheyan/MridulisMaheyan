@@ -37,7 +37,7 @@ saveHighScore = (e) => {
 };
 
 
-const scriptURL = '#'
+const scriptURL = 'https://script.google.com/macros/s/AKfycbw-3McRe6seMWisYWi_dWsIAOfS6GJZEuNiUduWmdTzN5e7lN7AmJ1kJw/exec'
  const form = document.forms['highScore']
 
 form.addEventListener('submit', e => {
